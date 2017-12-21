@@ -38,6 +38,7 @@
 
     <modules>
         <module>center-register</module>
+        <module>center-config</module>
     </modules>
     <!-- 阿里云maven仓库 ,可以是自己的私服-->
     <repositories>
