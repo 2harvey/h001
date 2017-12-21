@@ -10,8 +10,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableAutoConfiguration
 @EnableEurekaClient
 @EnableConfigServer
-public class ConfigServerBootstrap {
+public class CenterConfigBootstrap {
     public static void main(String[] args) {
-        SpringApplication.run(ConfigServerBootstrap.class, args);
+        SpringApplication.run(CenterConfigBootstrap.class, args);
     }
 }
