@@ -1,0 +1,19 @@
+zuul:
+  ignoredServices: '*'
+  routes:
+    auth-service:
+      path: /uaa/**
+      stripPrefix: false
+      sensitiveHeaders:
+    svca-service:
+      path: /svca/**
+      sensitiveHeaders:
+    svcb-service:
+      path: /svcb/**
+      sensitiveHeaders:
+    api-a:
+      path: /api-a/**
+      serviceId: CLIENTRIBBON
+    api-b:
+      path: /api-b/**
+      serviceId: CLIENTFEIGN
