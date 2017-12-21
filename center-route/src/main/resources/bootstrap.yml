@@ -1,0 +1,18 @@
+server:
+  port: 8741
+spring:
+  application:
+    name: center-route
+    index: ${random.long}
+  cloud:
+    config:
+      # zuul路由的配置从config服务器获得,名字是spring.application.name
+      uri: http://${CONFIG_HOST:localhost}:${CONFIG_PORT:8751}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_HOST:localhost}:8761/eureka  #注册 中心已经开启认证
+  instance:
+    prefer-ip-address: true
+    instanceId: ${spring.application.name}:${server.port}
