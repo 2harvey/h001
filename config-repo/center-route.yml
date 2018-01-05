@@ -28,6 +28,7 @@ keycloak:
     securityCollections:
     - name: user-role-mappings
       patterns:
+      - /
       - /msa/*
       - /msb/*
   policy-enforcer-config:
