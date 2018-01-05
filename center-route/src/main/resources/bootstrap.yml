@@ -2,7 +2,7 @@ server:
   port: 8741
 spring:
   application:
-    name: center-route
+    name: h001-center-route
     index: ${random.long}
   cloud:
     config:

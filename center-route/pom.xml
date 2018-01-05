@@ -44,6 +44,12 @@
             <artifactId>spring-boot-autoconfigure</artifactId>
             <version>1.5.9.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-spring-boot-starter</artifactId>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
