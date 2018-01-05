@@ -40,7 +40,6 @@
         <module>center-register</module>
         <module>center-config</module>
         <module>center-route</module>
-        <module>center-auth</module>
     </modules>
 
     <!-- 阿里云maven仓库 ,可以是自己的私服-->
@@ -103,6 +102,13 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>1.0.11</version>
+            </dependency>
+            <dependency>
+                <groupId>org.keycloak.bom</groupId>
+                <artifactId>keycloak-adapter-bom</artifactId>
+                <version>3.4.3.Final</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
