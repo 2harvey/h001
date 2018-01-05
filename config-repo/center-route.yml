@@ -20,11 +20,11 @@ keycloak:
   # 在领域中的的资源服务器的名称,就是keycload的client
   resource: center-route
   credentials:
-    secret: f67baee2-1cfe-46c4-8410-e1c1e9ba2d12
+    secret: 5decd33b-1fa5-40ec-b5dd-6dc1af1b9dd2
   # ssl-required: external
   securityConstraints:
   - authRoles:
-    - base-role
+    - uma_authorization
     securityCollections:
     - name: user-role-mappings
       patterns:
