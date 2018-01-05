@@ -1,19 +1,34 @@
 zuul:
   ignoredServices: '*'
   routes:
-    auth-service:
-      path: /uaa/**
-      stripPrefix: false
+    ms-a:
+      path: /msa/**
       sensitiveHeaders:
-    svca-service:
-      path: /svca/**
-      sensitiveHeaders:
-    svcb-service:
-      path: /svcb/**
+    ms-b:
+      path: /msb/**
       sensitiveHeaders:
     api-a:
       path: /api-a/**
       serviceId: CLIENTRIBBON
-    api-b:
-      path: /api-b/**
-      serviceId: CLIENTFEIGN
+
+keycloak:
+  public-client: true
+  # keycloak服务器地址
+  auth-server-url: http://localhost:8080/auth
+  # 自定义的领域名称
+  realm: zero-realm
+  # 在领域中的的资源服务器的名称,就是keycload的client
+  resource: center-route
+  credentials:
+    secret: f67baee2-1cfe-46c4-8410-e1c1e9ba2d12
+  # ssl-required: external
+  securityConstraints:
+  - authRoles:
+    - base-role
+    securityCollections:
+    - name: user-role-mappings
+      patterns:
+      - /msa/*
+      - /msb/*
+  policy-enforcer-config:
+    on-deny-redirect-to: /accessDenied
